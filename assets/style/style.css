@@ -93,6 +93,8 @@ body{
 
     .front-pane h2, p{
         text-align: center;
+        font-size: 80px;
+        font-weight: 900;
 
     }
     .front-pane button{
