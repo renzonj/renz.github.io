@@ -193,7 +193,7 @@ body{
     body{
       background: url(background/Banner_small_v2.png)no-repeat;
       background-size: cover;
-      height: 80vh;
+      height: 70vh;
     }
 
     .parallax img{
@@ -230,8 +230,7 @@ body{
 
     .front-pane img{
       display: block;
-      padding-top: 50px;
-      margin: 20px auto;
+      margin: 10px auto;
       width: 50%;
       object-fit: fill;
     }
