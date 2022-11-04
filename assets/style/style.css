@@ -191,7 +191,7 @@ body{
   @media (max-width: 820px) {
 
     body{
-      background: url(background/Banner_small_v2.png)no-repeat;
+      background: url(background/Banner_small_v3.png)no-repeat;
       background-size: cover;
       height: 70vh;
     }
@@ -215,12 +215,14 @@ body{
         text-align: center;
         font-size: 60px;
         font-weight: 1100;
+        text-shadow: 0px 0px 20px rgb(255, 255, 255);
     }
 
     .front-pane p{
       text-align: center;
       font-size: 20px;
       letter-spacing: 5px;
+      text-shadow: 0px 0px 5px rgb(255, 255, 255);
     }
 
     .front-pane button{
@@ -231,8 +233,10 @@ body{
     .front-pane img{
       display: block;
       margin: 10px auto;
+      padding-top: 20px;
       width: 50%;
       object-fit: fill;
+      filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
     }
 
     .navbar {
