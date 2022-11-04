@@ -97,10 +97,10 @@ body{
   .navbar a{
     color: rgba(36, 36, 36, 0.529);
     padding: 7px;
-    font-size: 17px;
+    font-size: 20px;
     margin-left: 10px;
     font-weight: 450;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-decoration: none;
     transition: 0.5s ease-in-out;
   }
@@ -108,7 +108,7 @@ body{
   .navbar a:hover{
     transition: 0.5s ease-in-out;
     color: rgb(36, 36, 36);
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-weight: 600;
     background: rgba(183, 183, 183, 0.251);
     border: rgba(103, 103, 103, 0.77);
@@ -116,8 +116,8 @@ body{
   }
 
   .navbar img{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
     left: 5px;
     transition: 0.5s ease-in-out;
@@ -170,17 +170,17 @@ body{
           position: absolute;
           width: 100%;
           object-fit: scale-down;
-          grid-area: 1 / 1 / 2 / 2;
+          margin-bottom: 30px;
         }
   
   
   
   .footer{
-    position: inherit;
+    position: static;
     bottom: 0;
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding-bottom: 20px;
     color: rgba(31, 31, 31, 0.641);
   }
 
@@ -193,7 +193,7 @@ body{
     body{
       background: url(background/Banner_small_v2.png)no-repeat;
       background-size: cover;
-      height: auto;
+      height: 80vh;
     }
 
     .parallax img{
@@ -230,6 +230,7 @@ body{
 
     .front-pane img{
       display: block;
+      padding-top: 50px;
       margin: 20px auto;
       width: 50%;
       object-fit: fill;
@@ -259,11 +260,19 @@ body{
         padding-left: 30px;
         padding-right: 30px;
       }
+    .text-content h1{
+      font-size: 22px;
+    }
+    .text-content h3{
+      font-size: 19px;
+    }
+    .text-content p{
+      font-size: 18px;
+    }
     .image-content img{
       width: 100%;
       object-fit: scale-down;
     }
-    
  }
 
  
