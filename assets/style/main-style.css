@@ -11,7 +11,7 @@ body{
     background-image: url(main_content/bg/antoine-rault-IhWRrZx4-kk-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    background-attachment: fixed;
 }
 
 
