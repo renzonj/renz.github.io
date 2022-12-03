@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.min.css');
+
+:root {
+    --lgr_blue: linear-gradient(90deg,  rgb(108, 160, 198) 0%, rgba(109, 181, 201, 0.512) 100%);
+    --lgr_cyan: linear-gradient(129deg, rgba(255, 255, 255, 0.25) 53%, rgba(215,248,255,.75) 100%);
+}
+
+
 *{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -8,7 +15,7 @@
 }
 
 body{
-    background-image: url(main_content/bg/antoine-rault-IhWRrZx4-kk-unsplash.jpg);
+    background-image: url(main_content/bg/antoine-rault-IhWRrZx4-kk-unsplash.JPG);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -80,14 +87,21 @@ body{
 
 .topbar{
     position: fixed;
-    top: 0;
-    left: 85px;
-    width: calc(100% - 85px);
+    left: 85px; /* +7px margin */
+    width: calc(100% - 85px); /* +7px margin */
+    height: 65px;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+
+}
+
+.topbar-content{
+    position: relative;
+    top: 8px;
     height: 55px;
-    background: rgb(0,212,255);
-    background: linear-gradient(90deg, rgba(154, 236, 252, 0.352) 0%, rgba(169, 169, 243, 0.467) 100%);
     z-index: 1;
     transition: all 0.5s ease;
+    border-radius: 7px;
 }
 
 .topbar-right{
@@ -154,6 +168,13 @@ body{
     outline: none;
 }
 
+@media (max-width: 750px) {
+    .search-container input{
+        width: 150px;
+    }
+
+}
+
 /* ---- Do Not Change ---- */
 
 
@@ -163,17 +184,11 @@ body{
 
 /* ---- MAIN CONTENT ---- */
 .main-content{
-    position: relative;
-    top: 55px;
-    left: 85px;
-    width: calc(100% - 85px);
-    height: calc(100% - 55px);
-    display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
     transition: all 0.5s ease;
-    padding: 40px;
+    overflow: hidden;
 }
 
 h1{
@@ -192,7 +207,7 @@ h3{
     color: rgb(255, 255, 255);
 }
 p{
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     color: rgb(255, 255, 255);
 }
@@ -246,6 +261,8 @@ hr{
     filter: invert();
 }
 
+
+
 .main-content-body{
     position: relative;
     width: 100%;
@@ -255,13 +272,51 @@ hr{
     justify-content: flex-start;
     flex-direction: row;
     gap: 20px;
+    padding: 10px 10px 20px 10px;
+    transition: 0.5s ease-in-out;
+
+    /* SCROLL */
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 
+/* width */
+::-webkit-scrollbar {
+    height: 8px;
+    width: 10px;
+    background-color: white;
+    border-radius: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #a8bdcf;
+    border-radius: 8px;
 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(228, 228, 228, 0.9);
+    border-radius: 8px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: white;
+    border-radius: 8px;
+  }
+
+
+
+/* ---- Event CARDS---- */
 .main-event-card{
+    
     position: relative;
-    width: 300px;
-    height: 200px;
+    width: 250px;
+    height: 180px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -269,18 +324,15 @@ hr{
     gap: 10px;
     background-color: #fff;
     border-radius: 10px;
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.196));
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+    outline: white solid 1px;
+    transition: 0.3s ease-in-out;
 }
 .main-event-card:hover{
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.87));
+    outline: white solid 3px;
+    transition: 0.3s ease-in-out;
 }
-.event-cover{
-    position: relative;
-    width: auto;
-    height: 100%;
-    display: block;
-    
-}
+
 .event-cover img{
     border-radius: 10px;
     object-fit: cover;
@@ -288,6 +340,7 @@ hr{
 }
 .main-event-card-title{
     position: absolute;
+    top: 0;
     width: 100%;
     height: auto;
     display: flex;
@@ -296,7 +349,11 @@ hr{
     flex-direction: column;
     gap: 5px;
     padding: 10px;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 1));
 }
+
+
+
 .main-event-card-body{
     position: absolute;
     bottom: 0;
@@ -308,7 +365,36 @@ hr{
     flex-direction: column;
     gap: 5px;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.56);
     border-radius: 0 0 10px 10px;
+    background:  var(--lgr_blue);
+    backdrop-filter: blur(2px);
 }
+
+.main-event-card-text h3, p{ /* Wrap text */
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 230px; 
+    white-space: nowrap;
+}
+
+
+/* ---- CALENDAR---- */
+#calendar {
+    max-width: 1100px;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+.calendar-frame{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+
+}
+.calendar-event-card{
+    display: block;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
 

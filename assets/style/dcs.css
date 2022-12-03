@@ -1,0 +1,22 @@
+:root {
+    --lgr_blue: linear-gradient(90deg,  rgb(108, 160, 198) 0%, rgba(109, 181, 201, 0.512) 100%);
+}
+
+body{
+    background: var(--lgr_blue);
+    background-size: cover;
+    background-attachment: fixed;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: whitesmoke;
+    margin: 30px 50px;
+    padding: 50px;
+    border-radius: 10px;
+}
