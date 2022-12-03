@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+  <div class="container">
+
+    <div class="header">
+      <div class="title">Sign in</div>
+      <div class="redirect">
+        <p>Already have an account? &nbsp;</p>
+        <a href="url">Login</a>
+      </div>
+    </div>
+    
+    <div class="content"> 
+
+      <form action="#">
+        <div class="user-details">
+
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="text" placeholder="First Name" required>
+              <label>First Name</label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="text" placeholder="Last Name" required>
+              <label>Last Name</label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="text" placeholder="Student ID Number" required>
+              <label>Student ID Number</label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+                <select id="school" onchange="this.dataset.chosen = this.value;" required>
+                  <option value="none"selected disabled hidden>Select School</option>
+                  <option value="KLD">KLD</option>
+                  <option value="CAVSU">CAVSU</option>
+                  <option value="DLSD-D"> DLSD-D</option>
+                  <option value="NCST">NCST</option>
+                  <option value="EAC">EAC</option>
+                </select>
+                <label>School</label>
+            </div>
+          </div>
+          
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="email" placeholder="School Email" required>
+              <label>School Email</label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="email" placeholder="Verify Email" required>
+              <label>Verify Email</label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="password" placeholder="Password" required>
+              <label>Password</label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="password" placeholder="Verify Password" required>
+              <label>Verify Password</label>
+            </div>
+          </div>
+          
+        </div>
+
+          <div class="checkbox">
+            <div class="fieldset">
+                <input type="checkbox" id="checkbox" required>
+                <p> I agree to the <a href="dcs/terms-and-conditions.html">Terms and Conditions</a> . Learn about how we use and protect your data in our  <a href="dcs/privacy-policy.html">Privacy Policy</a> .</p>
+            </div>
+          </div>
+
+          <div class="btn-div">
+            <div class="button1">
+              <button type="submit" value="Create Account">Create Account</button>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="btn-div">
+            <div class="button2">
+              <button type="submit" value="Log In with Office 365">Sign in with Office 365</button>
+            </div>
+          </div>
+
+      </form>
+    </div>
+  </div><!----End of user-details ---->
+
+
+</body>
+</html>
