@@ -7,12 +7,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-.main-container{
-  position: relative;
-  left: 95px;
-  top: 75px;
-  width: calc(100% - 95px);
-}
 
 .container {
   padding-top: 10px;

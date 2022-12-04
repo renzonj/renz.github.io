@@ -21,6 +21,21 @@ body{
     background-attachment: fixed;
 }
 
+.main-container{
+    position: relative;
+    left: 95px;
+    top: 75px;
+    width: calc(100% - 95px);
+  }
+  @media (max-width: 750px) {
+    .main-container{
+      position: relative;
+      left: 0px;
+      top: 65px;
+      width: 100%;
+    }
+  }
+
 
 /* ---- SIDEBAR with APPS ---- */
 
@@ -35,6 +50,21 @@ body{
     transition: all 0.5s ease;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.023));
 }
+@media (max-width: 750px) {
+    .sidebar{
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        height: 72px;
+    }
+}
+@media (max-width: 750px) {
+    .sideapps{
+        flex-direction: row;
+        padding-top: 4px;
+    }
+}
 
 .sidebar .logo{
     position: relative;
@@ -44,6 +74,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media (max-width: 750px) {
+    .sidebar .logo{
+        visibility: hidden;
+        position: absolute;
+    }
 }
 
 .sideapps{
@@ -57,6 +93,12 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+@media (max-width: 750px) {
+    .sideapps{
+        flex-direction: row;
+        padding-top: 4px;
+    }
 }
 
 .sideapps .app{
