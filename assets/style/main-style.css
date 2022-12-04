@@ -31,7 +31,7 @@ body{
     .main-container{
       position: relative;
       left: 0px;
-      top: 0px;
+      top: 65px;
       width: 100%;
       margin-bottom: 72px;
     }
@@ -134,22 +134,51 @@ body{
     left: 85px; /* +7px margin */
     width: calc(100% - 85px); /* +7px margin */
     height: 65px;
-    z-index: 1;
+    z-index: 5;
     backdrop-filter: blur(5px);
 }
 @media (max-width: 750px) {
     .topbar{
-        position: sticky;
+        position: fixed;
+        left: 85px; /* +7px margin */
+        width: calc(100% - 85px); /* +7px margin */
+        left: 0; /* +7px margin */
+        width: 100%; /* +7px margin */
+        background-color: rgba(255, 255, 255, 0.345);
     }
 }
 
 .topbar-content{
+    display: flex;
+    justify-content: space-between;
     position: relative;
     top: 8px;
     height: 55px;
     z-index: 1;
     transition: all 0.5s ease;
-    border-radius: 7px;
+}
+@media (max-width: 750px) {
+    .topbar-content{
+        top: 0;
+        height: 100%;
+    }
+}
+
+.topbar-left{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    padding: 0 10px;
+}
+.topbar-left img{
+    filter: brightness(100);
+    visibility: hidden;
+    margin: auto;
+}
+@media (max-width: 750px) {
+    .topbar-left img{
+        visibility: visible;
+    }
 }
 
 .topbar-right{
@@ -171,12 +200,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: opacity(0.6);
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
 }
 .topbar-item:hover{
-    filter: opacity(1);
     background: #fff;
-    border-radius: 8px;
 }
 
 
