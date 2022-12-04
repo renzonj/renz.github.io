@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+     <link href='../assets/style/login-signup.css' rel='stylesheet' />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+  <div class="container">
+
+      <div class="header">
+        <div class="title">Sign up</div>
+        <div class="redirect">
+          <p>Already have an account? &nbsp;</p>
+          <a href="url">Login</a>
+        </div>
+      </div>
+    
+    <div class="content"> 
+
+      <form action="#">
+        <div class="user-details">
+
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="text" placeholder="First Name" required>
+              <label>First Name</label>
+            </div>
+              <div class="error" id="fname">Please enter a valid First Name</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="text" placeholder="Last Name" required>
+              <label>Last Name</label>
+            </div>
+              <div class="error" id="lnmae">Please enter a valid Last Name</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="text" placeholder="Join/Pairing Code" required>
+              <label>Join/Pairing Code</label>
+            </div>
+              <div class="error" id="School">Please enter a valid Join/Pairing Code</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+                <select id="school" onchange="this.dataset.chosen = this.value;" required>
+                  <option value="none"selected disabled hidden>Select School</option>
+                  <option value="KLD">    KLD      </option>
+                  <option value="CAVSU">  CAVSU    </option>
+                  <option value="DLSD-D"> DLSD-D   </option>
+                  <option value="NCST">   NCST     </option>
+                  <option value="EAC">    EAC      </option>
+                </select>
+                <label>School</label>
+            </div>
+              <div class="error" id="School">Please select an affiliated school</div>
+          </div>
+          
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="email" placeholder="School Email" required>
+              <label>School Email</label>
+            </div>
+              <div class="error" id="email">Please enter a valid email address</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="email" placeholder="Verify Email" required>
+              <label>Verify Email</label>
+            </div>
+              <div class="error" id="verify_email">Email address don't match</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="password" placeholder="Password" required>
+              <label>Password</label>
+            </div>
+              <div class="error" id="password">Please enter a valid password</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="password" placeholder="Verify Password" required>
+              <label>Verify Password</label>
+            </div>
+              <div class="error" id="verify_password">Password don't match</div>
+          </div>
+          
+        </div>
+
+          <div class="checkbox">
+            <div class="fieldset">
+                <input type="checkbox" id="checkbox" required>
+                <p> I agree to the <a href="dcs/terms-and-conditions.html" target="_blank">Terms and Conditions</a> . Learn about how we use and protect your data in our  <a href="dcs/privacy-policy.html" target="_blank">Privacy Policy</a> .</p>
+            </div>
+          </div>
+
+          <div class="btn-div">
+            <div class="button1">
+              <button type="submit" value="Create Account">Create Account</button>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="btn-div">
+            <div class="button2">
+              <button type="submit" value="Log In with Office 365">Sign in with Office 365</button>
+            </div>
+          </div>
+
+      </form>
+    </div>
+  </div><!----End of user-details ---->
+
+
+</body>
+</html>
