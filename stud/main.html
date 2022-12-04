@@ -39,7 +39,7 @@
             <img src="../assets/img/icons/add_circle.png" alt="" width="40px" height="40px">
             <p>Add Event</p>
         </div>
-        <div class="app" id="today">
+        <div class="app">
             <img src="../assets/img/icons/today.png" alt="" width="40px" height="40px">
             <p>Today</p>
         </div>
@@ -95,7 +95,7 @@
        
                 <h3>Today</h3>
                 <div class='weather' id='weather'></div>
-                <h1>Wednesday, November 23</h1>
+                <h1 id="today">Wednesday, November 23</h1>
                 <h3> Dasmarinas &nbsp;&nbsp;|&nbsp;&nbsp; 29℃ &nbsp;&nbsp;|&nbsp;&nbsp;  Clear Sky</h3>
         <hr>
 <!-- UPCOMING EVENTS -->
@@ -282,8 +282,12 @@
 
 
 
+<!-- DATE TODAY-->
+<script>
 
+document.getElementById('today').innerHTML = new Date().toDateString();
 
+</script>
 
 <!-- CALENDAR FULL SCRIPT -->
 <script>
