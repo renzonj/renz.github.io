@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Sign Up</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- L-S Stylesheet -->
+    <link href='../assets/style/login-signup.css' rel='stylesheet' />
+    <!-- L-S Stylesheet -->
+    <script src="../assets/script/form/validation.js"></script>
+    <!-- Location JQ-->
+    <script src="../assets/script/form/city.js"></script>
+  
+   </head>
+<body>
+
+  <div class="container">
+
+      <div class="header">
+        <div class="title">Sign up</div>
+        <div class="redirect">
+          <p>Already have an account? &nbsp;</p>
+          <a href="url">Login</a>
+        </div>
+      </div>
+    
+    <div class="content"> 
+
+      <form action="#">
+        <div class="user-details">
+
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="text" placeholder="First Name" id="fname" onkeyup='checkName();' required>
+              <label>First Name</label>
+            </div>
+              <div class="error" id="fname-info">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="text" placeholder="Last Name" id="lname" onkeyup='checkName();' required>
+              <label>Last Name</label>
+            </div>
+              <div class="error" id="lname-info">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="tel" placeholder="Phone Number" id="phone" onkeyup="checkPhone();" required>
+              <label>Phone Number</label>
+            </div>
+              <div class="error" id="phone-info">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="text" placeholder="Job Title"  id="title" onkeyup="checkTitle();" required>
+              <label>Job Title</label>
+            </div>
+              <div class="error" id="title-info">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+                <select id="province" onchange="this.dataset.chosen = this.value;" onclick="checkIfEmptyProv();" required></select>
+                <label id="label-prov">Province</label>
+            </div>
+              <div class="error" id="province-info">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+                <select id="city" onchange="this.dataset.chosen = this.value;" onclick="checkIfEmptyCity();"  required></select>
+                <label>City / Municipality</label>
+            </div>
+              <div class="error" id="city-info">&nbsp;</div>
+          </div>
+
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="text" placeholder="School Name" required>
+              <label>School Name</label>
+            </div>
+              <div class="error" id="school-info">&nbsp;</div>
+          </div>
+          
+          <div class="input-box">
+            <div class="fieldset">
+                <select id="OrgType" onchange="this.dataset.chosen = this.value;" required>
+                  <option value="none"selected disabled hidden>Select Account Type</option>
+                  <option value="Admin">    School Admin           </option>
+                  <option value="Faculty">  School Faculty         </option>
+                  <option value="Faculty">  School Organization    </option>
+                </select>
+                <label>Organization Type</label>
+            </div>
+              <div class="error" id="org-info">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="email" placeholder="Email Address" id="email" onkeyup='checkEmail();' required>
+              <label>Email Address</label>
+            </div>
+              <div class="error" id="email-info">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="email" placeholder="Verify Email Address" id="verify-email" onkeyup='checkEmail();' required>
+              <label>Verify Email Address</label>
+            </div>
+              <div class="error" id="verify-email-info">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="password"  id="password" placeholder="Password" onkeyup='checkPassword();' required>
+              <label>Password</label>
+            </div>
+              <div class="error" id="pass-info-1">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="password" id="verify_password" placeholder="Verify Password" onkeyup='checkPassword();' required>
+              <label>Verify Password</label>
+            </div>
+              <div class="error" id="pass-info-2">&nbsp;</div>
+          </div>
+          
+        </div>
+
+          <div class="checkbox">
+            <div class="fieldset">
+                <input type="checkbox" id="checkbox" required>
+                <p> I agree to the <a href="../dcs/terms-and-conditions.html" target="_blank">Terms and Conditions</a> . Learn about how we use and protect your data in our  <a href="../dcs/privacy-policy.html" target="_blank">Privacy Policy</a> .</p>
+            </div>
+          </div>
+
+          <div class="btn-div">
+            <div class="button1">
+              <button type="submit" value="Create Account">Create Account</button>
+            </div>
+          </div>
+
+      </form>
+    </div>
+  </div><!----End of user-details ---->
+
+
+<script>
+  
+  // to FIX the DESIGN Issue
+  var checkIfEmptyProv = function(){
+    var province = document.getElementById('province').value;
+    var plen = province.length;
+
+    if(plen == 0){
+      document.getElementById('province-info').innerHTML = province+"Please select a province";
+    }  
+    else{
+      document.getElementById('label-prov').style.visibility = 'visible';
+      document.getElementById('province').style.borderColor = '#3a7cc9';
+      document.getElementById('province').style.color = 'black';
+    }
+  }
+
+</script>
+
+
+
+<script>	
+window.onload = function() {	
+
+	// ---------------
+	// basic usage
+	// ---------------
+	var $ = new City();
+	$.showProvinces("#province");
+	$.showCities("#city");
+
+	// ------------------
+	// additional methods 
+	// -------------------
+
+	// will return all provinces 
+	console.log($.getProvinces());
+	
+	// will return all cities 
+	console.log($.getAllCities());
+	
+	// will return all cities under specific province (e.g Batangas)
+	console.log($.getCities("Batangas"));	
+	
+}
+</script>
+
+
+</body>
+</html>

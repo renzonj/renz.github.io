@@ -15,6 +15,7 @@
 body{
   display: flex;
   justify-content: center;
+  align-content: center;
   align-items: center;
   padding: 10px;
   background-image: url(../img/bg/nicola-styles-UPXAjm_I_fs-unsplash_v2.jpg);
@@ -27,10 +28,11 @@ body{
   position: relative;
   display: block;
   max-width: 700px;
-  width: 95%;
-  background-color: white;
-  margin: 30px 0 30px 0;
+  width: auto;
+  margin: 20px auto;
   padding: 25px 40px;
+
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
@@ -67,7 +69,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 35px 0 15px 0;
+  margin: 25px 0 0 0;
 }
 
 form .user-details .input-box{
@@ -92,6 +94,9 @@ form .user-details .input-box{
   border-color: #3a7cc9;
   color: black;
 }
+
+
+
 select{
   color: grey;
 }
@@ -195,24 +200,39 @@ form .user-details .input-box{
 /* ---- FIELD with ANIMATION -----*/
 .fieldset > label{
   position: relative;
-  font-size: 10px;
+  font-size: 16px;
+  top: -35px;
+  margin: 5px;
+  font-weight: 400;
+  padding: 0 10px;
+  visibility: visible;
+  color: grey;
+  user-select: none;
+  z-index: -1;
+  
+}
+input:focus ~ label,
+input:valid ~ label,
+select[data-chosen] ~ label
+{
+  font-size: 13px;
+  color: #3a7cc9;
+  visibility: visible;
+  transition: all 0.3s ease;
   top: -59px;
   margin: -5px 10px -8px;
   font-weight: 400;
   background-color: white;
   padding: 0 10px;
-  visibility: hidden;
+  z-index: 1;
 }
-input:focus ~ label,
-input:valid ~ label{
-  font-size: 13px;
-  color: #3a7cc9;
+
+#prov-info{
   visibility: visible;
-  transition: all 0.3s ease;
 }
+
 input:focus::placeholder,
 input:valid::placeholder {
-  font-size: 5px;
   color: transparent;
   transition: all 0.3s ease;
 }
@@ -223,6 +243,21 @@ input::placeholder {
 option{
   color: black;
 }
+
+/* ---- To fix the Province Highlight Issue -----*/
+#label-prov{
+  font-size: 13px;
+  color: #3a7cc9;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  top: -59px;
+  margin: -5px 10px -8px;
+  font-weight: 400;
+  background-color: white;
+  padding: 0 10px;
+  z-index: 1;
+}
+
 
 
 
@@ -249,15 +284,12 @@ option{
 
 /* ---- Error ---- */
 .error{
-  visibility: hidden;
+  visibility: visible;
   position: relative;
   top: -20px;
   color: red;
   font-size: 12px;
   font-weight: 400;
+}
 
-}
-#email{
-  visibility: hidden;
-}
 

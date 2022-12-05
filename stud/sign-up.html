@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Sign Up</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- L-S Stylesheet -->
+    <link href='../assets/style/login-signup.css' rel='stylesheet' />
+    <!-- L-S Stylesheet -->
+    <script src="../assets/script/form/validation.js"></script>
+  
+  </head>
+<body>
+
+  <div class="container">
+
+      <div class="header">
+        <div class="title">Sign up</div>
+        <div class="redirect">
+          <p>Already have an account? &nbsp;</p>
+          <a href="url">Login</a>
+        </div>
+      </div>
+    
+    <div class="content"> 
+
+      <form name="stud-form" action="#">
+        <div class="user-details">
+
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="text" placeholder="First Name" id="fname" onkeyup='checkName();' required>
+              <label>First Name</label>
+            </div>
+              <div class="error" id="fname-info">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="text" placeholder="Last Name" id="lname" onkeyup='checkName();' required>
+              <label>Last Name</label>
+            </div>
+              <div class="error" id="lname-info">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="text" placeholder="Join/Pairing Code" id="paircode" onkeyup='checkPairCode();' required>
+              <label>Join/Pairing Code</label>
+            </div>
+              <div class="error" id="paircode-info">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+                <select id="school" onchange="this.dataset.chosen = this.value;" required>
+                  <option value="none"selected disabled hidden>Select School</option>
+                  <option value="KLD">    KLD      </option>
+                  <option value="CAVSU">  CAVSU    </option>
+                  <option value="DLSD-D"> DLSD-D   </option>
+                  <option value="NCST">   NCST     </option>
+                  <option value="EAC">    EAC      </option>
+                </select>
+                <label>School</label>
+            </div>
+              <div class="error" id="School">&nbsp;</div>
+          </div>
+          
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="email" placeholder="School Email" id="email" onkeyup='checkEmail();' required>
+              <label>School Email</label>
+            </div>
+              <div class="error" id="email-info">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="email" placeholder="Verify Email" id="verify-email" onkeyup='checkEmail();' required>
+              <label>Verify Email</label>
+            </div>
+              <div class="error" id="verify-email-info">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="password"  id="password" placeholder="Password" onkeyup='checkPassword();' required>
+              <label>Password</label>
+            </div>
+              <div class="error" id="pass-info-1">&nbsp;</div>
+          </div>
+
+          <div class="input-box">
+            <div class="fieldset">
+              <input type="password" id="verify_password" placeholder="Verify Password" onkeyup='checkPassword();' required>
+              <label>Verify Password</label>
+            </div>
+              <div class="error" id="pass-info-2">&nbsp;</div>
+          </div>
+          
+        </div>
+
+          <div class="checkbox">
+            <div class="fieldset">
+                <input type="checkbox" id="checkbox" required>
+                <p> I agree to the <a href="../dcs/terms-and-conditions.html" target="_blank">Terms and Conditions</a> . Learn about how we use and protect your data in our  <a href="../dcs/privacy-policy.html" target="_blank">Privacy Policy</a> .</p>
+            </div>
+          </div>
+
+          <div class="btn-div">
+            <div class="button1">
+              <button type="submit" value="Create Account">Create Account</button>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="btn-div">
+            <div class="button2">
+              <button type="submit">Sign up with Office 365</button>
+            </div>
+          </div>
+
+      </form>
+    </div>
+  </div><!----End of user-details ---->
+
+
+</body>
+</html>
