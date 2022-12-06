@@ -283,8 +283,10 @@ option{
   cursor: pointer;
 }
 .checkbox p{
+  position: relative;
+  top: -5px;
   display: inline;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   color: #666;
   cursor: pointer;
@@ -302,3 +304,185 @@ option{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---- LOG-IN DESIGN ---- */
+.container_v2{
+  top: 0;
+  position: relative;
+  display: block;
+  max-width: 700px;
+  width: auto;
+  margin: 120px auto;
+
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+@media(max-width: 584px){
+  .container_v2{
+      margin: 15px;
+ }
+}
+
+
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+@media(max-width: 584px){
+  .wrapper{
+    box-shadow: none;
+
+ }
+}
+
+
+.wrapper .title{
+  height: 120px;
+  background-image: url(../img/bg/Banner_small_v4.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+  border-radius: 10px 10px 0 0;
+  color: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media(max-width: 584px){
+  .wrapper .title{
+    width: 100%;
+    position: relative;
+    height: 100px;
+
+ }
+}
+
+.wrapper .title span{
+  font-size: 25px;
+  font-weight: 600;
+  color: #2581e9;
+  filter: drop-shadow(10px -5px 5px rgb(255, 255, 255));
+}
+
+.wrapper form{
+  width: 400px;
+  padding: 0px 30px 30px 30px;
+}
+
+@media(max-width: 584px){
+  .wrapper form{
+    width: 100%;
+ }
+}
+
+.wrapper form .fieldset_v2{
+  position: relative;
+  height: 45px;
+  margin-bottom: 15px;
+}
+.wrapper form .fieldset_v2 input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  padding-right: 0PX;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .fieldset_v2 input:focus{
+  border-color:#3a7cc9;
+  border-bottom: 2px solid #3a7cc9;
+}
+form .fieldset_v2 input::placeholder{
+  color:#999;
+}
+
+.wrapper form .pass{
+  display: flex;
+  justify-content: flex-end;
+  margin: -15px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: #1E90FF;
+  font-size: 15px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color:#fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background:linear-gradient(135deg,#71b7e6, #096ff5);
+  border: 1px solid;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: linear-gradient(-135deg, #82c1eb, #a4bde1);
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  color: gray;
+}
+.wrapper form .signup-link a{
+  color: #1E90FF;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+
+
+.fieldset_v2 > label{
+  position: relative;
+  font-size: 16px;
+  top: -35px;
+  margin: 5px;
+  font-weight: 400;
+  padding: 0 10px;
+  visibility: visible;
+  color: grey;
+  user-select: none;
+  z-index: -1;
+}
+.error_2{
+  visibility: visible;
+  position: relative;
+  top: -13px;
+  color: red;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* To Hide the PlaceHolder */
+#email:focus::placeholder,
+#email:valid::placeholder,
+#password:focus::placeholder,
+#password:valid::placeholder {
+  color: transparent;
+  transition: all 0.3s ease;
+}

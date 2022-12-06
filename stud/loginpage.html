@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- L-S Stylesheet -->
+    <link href='../assets/style/login-signup.css' rel='stylesheet' />
+    <!-- L-S Stylesheet -->
+    <script src="../assets/script/form/validation.js"></script>
+    
+    
+
+<style>body{background: linear-gradient(90deg,  rgb(108, 160, 198) 0%, rgba(109, 181, 201, 0.512) 100%); ;overflow: hidden;}</style>
+
+</head>
+  <body>
+    <div class="container_v2">
+      <div class="wrapper">
+        <div class="title"><span>Student Login</span></div>
+        <form action="#">
+
+          <!-- EMAIL BOX -->
+          <div class="input-box">
+            <div class="fieldset_v2">
+              <input type="email" placeholder="Email Address" id="email" onkeyup='checLogkEmail();' required>
+              <label>Email Address</label>
+            </div>
+              <div class="error_2" id="email-info">&nbsp;</div>
+          </div>
+
+          <!-- PASSWORD BOX -->
+          <div class="input-box">
+            <div class="fieldset_v2">
+              <input type="password"  id="password" placeholder="Password" onkeyup='checkLogPassword();' required>
+              <label>Password</label>
+            </div>
+              <div class="error_2" id="pass-info-1">&nbsp;</div>
+          </div>
+
+          <div class="pass"><a href="#">Forgot password?</a></div>
+          
+          <!-- REMEMBER ME Check Box -->
+          <div class="checkbox">
+            <div class="fieldset">
+                <input type="checkbox" id="checkbox" required>
+                <p> Remember Me</p>
+            </div>
+          </div>
+          
+          
+          
+          <div class="fieldset_v2 button">
+            <input type="submit" value="Login">
+          </div>  
+
+          
+
+
+
+        <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+        </form>  
+      </div>
+
+
+
+
+
+  </body>
+</html>
+
+    
+    

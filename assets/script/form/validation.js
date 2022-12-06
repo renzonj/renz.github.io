@@ -50,6 +50,7 @@ var checkPassword = function() {
     }
   }
 
+  
 
 
   // function for email validation  
@@ -206,3 +207,58 @@ var checkPassword = function() {
     }
     
 
+
+
+
+  //   ----------------  LOGIN VALIDATION ----------------
+
+  // function for password validation
+var checkLogPassword = function() {
+  var password = document.getElementById('password').value;
+  var pl = password.length;
+  var pass_req =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,20}$/;
+
+  // --- check if length is between 8 and 20
+  if (pl !== 0) { // if password is not empty
+      if (pl < 8) {
+      document.getElementById('pass-info-1').style.color = "red";
+      document.getElementById('pass-info-1').innerHTML = "Password must contain at least 8 characters";
+      }
+      // --- check if password passes requirements
+      else if (password.match(pass_req)) {
+      document.getElementById('pass-info-1').style.color = "green";
+      document.getElementById('pass-info-1').innerHTML = "&#10004 Password is valid";
+      }
+      // --- if password does not pass requirements
+      else {
+      document.getElementById('pass-info-1').style.color = "red";
+      document.getElementById('pass-info-1').innerHTML = "&#10006 Password must contain at least 1 uppercase, number and a special character";
+      }
+  }
+  else {
+      document.getElementById('pass-info-1').innerHTML = "&nbsp;";
+  }
+  
+}
+
+
+
+ // function for email validation  
+ var checLogkEmail = function() {    
+  var email = document.getElementById('email').value;
+  var email_req = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  var el = email.length;
+
+  // --- check if email is valid
+  if (el > 0) {
+    if (email.match(email_req)) {
+        document.getElementById('email-info').innerHTML = '&nbsp';
+    } 
+    else{
+        document.getElementById('email-info').innerHTML = 'Enter a valid Email';
+    }
+  }
+  else {
+    document.getElementById('email-info').innerHTML = '&nbsp';
+  }
+}
