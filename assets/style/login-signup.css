@@ -98,7 +98,10 @@ form .user-details .input-box{
 
 
 select{
-  color: grey;
+  opacity: 0.7;
+  background-color: white;
+  
+  
 }
 option{
   color: black;
@@ -213,6 +216,7 @@ form .user-details .input-box{
 }
 input:focus ~ label,
 input:valid ~ label,
+select:focus ~ label,
 select[data-chosen] ~ label
 {
   font-size: 13px;
@@ -256,6 +260,7 @@ option{
   background-color: white;
   padding: 0 10px;
   z-index: 1;
+  
 }
 
 
