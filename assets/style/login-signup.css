@@ -89,21 +89,22 @@ form .user-details .input-box{
 }
 .user-details .input-box input:focus,
 .user-details .input-box input:valid,
-.user-details .input-box select:focus,
 .user-details .input-box select[data-chosen]{
   border-color: #3a7cc9;
   color: black;
   opacity: 1;
 }
 
-
+select::-ms-value {
+  background: none;
+}
 
 select
 {
   border: 1px solid rgb(150, 150, 150);
   border-bottom-width: 2px;
   opacity: 0.6;
-  background-color: white;
+  background: none;
 
 }
 option{
