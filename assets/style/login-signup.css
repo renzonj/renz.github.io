@@ -96,7 +96,7 @@ form .user-details .input-box{
 }
 
 select::-ms-value {
-  background: none;
+  background: white;
 }
 
 select
@@ -104,7 +104,7 @@ select
   border: 1px solid rgb(150, 150, 150);
   border-bottom-width: 2px;
   opacity: 0.6;
-  background: none;
+  background: white;
 
 }
 option{
