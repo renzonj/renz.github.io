@@ -13,11 +13,13 @@
   font-family: 'Poppins',sans-serif;
 }
 body{
+  
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
   padding: 10px;
+  /* Default background for signup */
   background-image: url(../img/bg/nicola-styles-UPXAjm_I_fs-unsplash_v2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -274,7 +276,7 @@ option{
 
 .checkbox{
   align-items: center;
-  margin: 10px 0;
+  margin: 10px 2px;
 }
 .checkbox input{
   width: 20px;
@@ -319,6 +321,12 @@ option{
 
 
 /* ---- LOG-IN DESIGN ---- */
+body #login-bg{
+  background-image: url(../assets/img/bg/vackground-com-0F2pC8_DwvM-unsplash\ copy.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+  }
 .container_v2{
   top: 0;
   position: relative;
@@ -335,6 +343,7 @@ option{
 @media(max-width: 584px){
   .container_v2{
       margin: 15px;
+
  }
 }
 
@@ -355,7 +364,7 @@ option{
 
 .wrapper .title{
   height: 120px;
-  background-image: url(../img/bg/Banner_small_v4.png) ;
+  background-image: url(../img/bg/Banner_small_v4.1.png) ;
     background-repeat: no-repeat;
     background-size: cover;
   border-radius: 10px 10px 0 0;
