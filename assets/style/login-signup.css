@@ -93,15 +93,17 @@ form .user-details .input-box{
 .user-details .input-box select[data-chosen]{
   border-color: #3a7cc9;
   color: black;
+  opacity: 1;
 }
 
 
 
-select{
-  opacity: 0.9;
-  background-color: white;
-  
-  
+select
+{
+  border: 1px solid rgb(150, 150, 150);
+  border-bottom-width: 2px;
+  opacity: 0.6;
+
 }
 option{
   color: black;
