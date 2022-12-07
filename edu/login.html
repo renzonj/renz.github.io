@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Login</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- L-S Stylesheet -->
+    <link href='../assets/style/login-signup.css' rel='stylesheet' />
+    <!-- L-S Stylesheet -->
+    <script src="../assets/script/form/validation.js"></script>
+    
+
+<style>
+body{
+background-image: url(../assets/img/bg/valeria-davgon-7I5iYg1KxVs-unsplash.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+</style>
+
+
+</head>
+<body>
+    <div class="container_v2">
+      <div class="wrapper">
+        <div class="title primary2" id="edu_title"><span>School Login</span></div>
+        <form action="#">
+
+          <!-- EMAIL BOX -->
+          <div class="input-box primary2">
+            <div class="fieldset_v2">
+              <input type="email" placeholder="Email Address" id="email" onkeyup='checLogkEmail();' required>
+              <label class="primary2">Email Address</label>
+            </div>
+              <div class="error_2" id="email-info">&nbsp;</div>
+          </div>
+
+          <!-- PASSWORD BOX -->
+          <div class="input-box primary2">
+            <div class="fieldset_v2">
+              <input type="password"  id="password" placeholder="Password" onkeyup='checkLogPassword();' required>
+              <label class="primary2">Password</label>
+            </div>
+              <div class="error_2" id="pass-info-1">&nbsp;</div>
+          </div>
+
+          <div class="fpass primary2"><a href="../edu/forgotpassword.html">Forgot password?</a></div>
+          
+          <!-- REMEMBER ME Check Box -->
+          <div class="checkbox">
+            <div class="fieldset">
+                <input type="checkbox" class="primary2" required>
+                <p> Remember Me</p>
+            </div>
+          </div>
+          
+          <!-- LOGIN BUTTON -->
+          <div class="fieldset_v2 primary2-btn">
+            <input type="submit" value="Login">
+          </div>  
+
+          <!-- REDIRECT SIGN UP LINK -->
+        <div class="signup-link ">Not a member? <a class="primary2" href="../edu/signup.html">Sign up now</a></div>
+        </form>  
+      </div>
+    </div>
+
+
+  </body>
+</html>
+
+    
+    

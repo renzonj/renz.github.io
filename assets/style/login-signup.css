@@ -3,8 +3,61 @@
 :root {
   --lgr_blue: linear-gradient(90deg,  rgb(108, 160, 198) 0%, rgba(109, 181, 201, 0.512) 100%);
   --lgr_cyan: linear-gradient(129deg, rgba(255, 255, 255, 0.25) 53%, rgba(215,248,255,.75) 100%);
+  --lgr_orange: linear-gradient(90deg, rgb(255, 81, 0) 0%, rgba(244, 151, 130, 0.452) 100%);
   --lgr_btn_blue: linear-gradient(135deg, #ffffff, #eeeeee);
+  --lgr_default_blue: linear-gradient(135deg, #71b7e6, #2b8ae2);
+  --lgr_default_blue_hover: linear-gradient(-135deg, #82c1eb, #a4bde1);
+  --lgr_default_blue_clicked: linear-gradient(-135deg, #78aed2, #99b1d2);
+  --lgr_default_orange: linear-gradient(-135deg, #f64c1c, #e7896a);
+  --lgr_default_orange_hover: linear-gradient(-135deg, #fc8969, #e8a088);
+  --lgr_default_orange_clicked: linear-gradient(-135deg, #de6b4b, #dd9a84);
 }
+
+/* ---- MAIN Colors ---- */
+
+/* Stud blue */
+.primary{
+  color: #2581e9 !important;
+}
+/* Edu orangered */
+.primary2,
+.primary2 a,
+.primary2 span,
+.primary2:checked
+{
+  color: orangered !important;
+  accent-color: orangered !important;
+  border-color: orangered !important;
+}
+.primary2 input:focus,
+.primary2 input:valid,
+.primary2 select[data-chosen],
+.primary2:checked
+{
+  border-color: orangered !important;
+}
+.primary2-btn input,
+.primary2-btn button{
+  background: var(--lgr_default_orange) !important;
+  color:#fff;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.primary2-btn input:hover,
+.primary2-btn button:hover{
+  background: var(--lgr_default_orange_hover) !important;
+}
+.primary2-btn input:active,
+.primary2-btn button:active{
+  background: var(--lgr_default_orange_clicked) !important;
+  border: none;
+}
+
+
+
+
+
 
 *{
   margin: 0;
@@ -13,7 +66,6 @@
   font-family: 'Poppins',sans-serif;
 }
 body{
-  
   display: flex;
   justify-content: center;
   align-content: center;
@@ -38,6 +90,7 @@ body{
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
+
 .container .title{
   font-size: 25px;
   font-weight: 500;
@@ -47,14 +100,22 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 /* login redirect */
 .container .redirect{
   display: flex;
   justify-content: flex-end;
+  font-size: 15px;
   color: grey;
+}
+.container .redirect a{
+  color: #1E90FF;
+  font-size: 15px;
+  text-decoration: none;
+}
+.container .redirect a:hover{
+  text-decoration: underline;
 }
 
 .container .title::before{
@@ -65,7 +126,7 @@ body{
   height: 3px;
   width: 95px;
   border-radius: 5px;
-  background: var(--lgr_blue);
+  background: var(--lgr_orange);
 }
 .content form .user-details{
   display: flex;
@@ -107,7 +168,6 @@ select
   border-bottom-width: 2px;
   opacity: 0.6;
   background: white;
-
 }
 option{
   color: black;
@@ -168,38 +228,49 @@ hr{
   form .button2 button:hover{
     background: #fd8b6b;
   }
+
+
+
+
+
   /* ---- Responsive Mobile View ---- */
  @media(max-width: 584px){
- .container{
-  max-width: 100%;
-  margin: 15px 0 15px 0;
-}
-.container .header{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-}
-.container .redirect{
-  padding-top: 15px;
-}
-
-form .user-details .input-box{
-    width: 100%;
+  body{
+    padding: 0;
+    }
+  .container{
+    
+    margin: 0;
+    top: 0  ;
+    border-radius: 0;
   }
-  .content form .user-details{
-    max-height: 90%;
-    margin: 20px 0 15px 0;
-  }
-  .user-details::-webkit-scrollbar{
-    width: 5px;
-  }
-  }
-  @media(max-width: 459px){
-  .container .content{
+  .container .header{
+    display: flex;
     flex-direction: column;
+    align-items: center;
+
   }
-}
+  .container .redirect{
+    padding-top: 15px;
+  }
+
+  form .user-details .input-box{
+      width: 100%;
+    }
+    .content form .user-details{
+      max-height: 90%;
+      margin: 20px 0 15px 0;
+    }
+    .user-details::-webkit-scrollbar{
+      width: 5px;
+    }
+    }
+    @media(max-width: 459px){
+    .container .content{
+      flex-direction: column;
+      padding-top: 10px;
+    }
+  }
 
 
 
@@ -257,7 +328,7 @@ option{
 /* ---- To fix the Province Highlight Issue -----*/
 #label-prov{
   font-size: 13px;
-  color: #3a7cc9;
+  color: orangered;
   visibility: hidden;
   transition: all 0.3s ease;
   top: -59px;
@@ -321,29 +392,31 @@ option{
 
 
 /* ---- LOG-IN DESIGN ---- */
-body #login-bg{
-  background-image: url(../assets/img/bg/vackground-com-0F2pC8_DwvM-unsplash\ copy.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-  }
+
 .container_v2{
-  top: 0;
-  position: relative;
-  display: block;
-  max-width: 700px;
-  width: auto;
-  margin: 120px auto;
+  /* to perfectly center H V */
+  width: 400px;
+  height: 460px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
 
-@media(max-width: 584px){
+@media(max-width: 400px){
   .container_v2{
-      margin: 15px;
-
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      border-radius: 0;
+      height: 100%;
+      box-shadow: none;
+      width: 100%;
  }
 }
 
@@ -354,13 +427,11 @@ body #login-bg{
   border-radius: 10px;
   box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
 }
-@media(max-width: 584px){
+@media(max-width: 400px){
   .wrapper{
-    box-shadow: none;
-
+      box-shadow: none;
  }
 }
-
 
 .wrapper .title{
   height: 120px;
@@ -372,7 +443,15 @@ body #login-bg{
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgb(16, 53, 146);
 }
+/* EDU TITLE */
+#edu_title{
+  height: 120px;
+  background-image: url(../img/bg/Banner_small_v4.2.png) ;
+}
+
+
 
 @media(max-width: 584px){
   .wrapper .title{
@@ -386,7 +465,6 @@ body #login-bg{
 .wrapper .title span{
   font-size: 25px;
   font-weight: 600;
-  color: #2581e9;
   filter: drop-shadow(10px -5px 5px rgb(255, 255, 255));
 }
 
@@ -425,17 +503,17 @@ form .fieldset_v2 input::placeholder{
   color:#999;
 }
 
-.wrapper form .pass{
+.wrapper form .fpass{
   display: flex;
   justify-content: flex-end;
   margin: -15px 0 20px 0;
 }
-.wrapper form .pass a{
+.wrapper form .fpass a{
   color: #1E90FF;
   font-size: 15px;
   text-decoration: none;
 }
-.wrapper form .pass a:hover{
+.wrapper form .fpass a:hover{
   text-decoration: underline;
 }
 .wrapper form .button input{
@@ -443,12 +521,15 @@ form .fieldset_v2 input::placeholder{
   font-size: 20px;
   font-weight: 500;
   padding-left: 0px;
-  background:linear-gradient(135deg,#71b7e6, #096ff5);
+  background:var(--lgr_default_blue);
   border: 1px solid;
   cursor: pointer;
 }
 form .button input:hover{
-  background: linear-gradient(-135deg, #82c1eb, #a4bde1);
+  background: var(--lgr_default_blue_hover);
+}
+form .button input:active{
+  background: var(--lgr_default_blue_clicked);
 }
 .wrapper form .signup-link{
   text-align: center;
@@ -494,4 +575,35 @@ form .signup-link a:hover{
 #password:valid::placeholder {
   color: transparent;
   transition: all 0.3s ease;
+}
+
+
+
+/* ---- LOG-IN DESIGN ---- */
+
+.container_v3{
+  /* to perfectly center H V */
+  width: 400px;
+  height: 360px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+@media(max-width: 400px){
+  .container_v3{
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      border-radius: 0;
+      height: 100%;
+      box-shadow: none;
+      width: 100%;
+ }
 }
